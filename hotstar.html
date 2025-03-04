@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Hotstar</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scrollbar-width: 0px;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+  
+  /* .container{
+      width: 100vw;
+      height: 100vh;
+      background-color: red;
+  } */
+   body{
+    background-color: black;
+   }
+  .nav{
+      width: 6vw;
+      min-height: 100vh;
+      background-color: black;
+      position: fixed;
+      left: 0;
+      top: 0;
+  }
+  .icons{
+      padding-top: 90px;
+  }
+  .icon{
+  margin-top: 40px;
+  color: gray;
+        cursor: pointer;
+  }
+  .icon:hover {
+        font-size: 20px;
+        color: white;
+        transition: 0.18s all ease;
+      }
+      .main {
+        width: 94vw;
+        float: right;
+        background-color: black;
+      }
+      .section1 {
+      width: 85%;
+      height: 250px;
+      background-color: black;
+      color: white;
+    }
+    .sec1m {
+      width: 400px;
+    }
+
+  .dare{
+    height: 100%;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+  }
+  .jio{
+border-radius:5px  ;
+  }
+  .trailer{
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    background: rgb(44, 43, 43);
+    color: white;
+      font-size: 25px;
+      padding-left: 40px;
+      padding-right: 40px;
+
+  }
+  .section2{
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .bg{
+    width: 93vw;
+    float: right;
+    position: sticky;
+    top: 0;
+  }
+  .title{
+    width: 39%;
+    min-height: 400px;
+    padding-left: 50px;
+    position: relative;
+    bottom: 1px;
+  }
+  .watchnow{
+      width: 350px;
+      font-size: 20px;
+      padding: 10px 100px;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      background: -webkit-linear-gradient(to right, #0059ff, #ef0323);
+      background: linear-gradient(to right, #0059ff, #ef0323);
+
+  }
+  .plus{
+      width: 49px;
+      height: 49px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(119, 119, 119, 0.399);
+      padding-top: 0;
+  }
+  .bl {
+      overflow: scroll;
+      width: 350px;
+      gap: 10px;
+      padding: 20px;
+      position:fixed;
+            bottom: 10px;
+            right: 10px;
+    }
+
+    .pop {
+      width: 95px;
+      cursor: pointer;
+
+    }
+    .bl::-webkit-scrollbar {
+    display: none;
+}
+    .pop:hover {
+      scale: 1.1;
+      transition: 0.18s all ease;
+    }
+  .section2-2{
+width: 100vw;
+min-height: 100vh; 
+        
+
+  }
+  .text{
+    color: white;
+    font-size: 25px;
+    padding-left: 20px;
+    margin-top: 50px;
+    position: relative;
+    bottom: 5px;
+
+  }
+  .latest{
+    margin-left: 20px;
+    margin-right: 40px;
+            overflow: scroll;
+             height:auto;
+}
+.latest::-webkit-scrollbar {
+    display: none;
+}
+  .box{
+            position:relative;
+            margin-left: 2px;
+            cursor:pointer;
+            /* background-color: black; */
+            transition:0.5s all ease;
+
+        }
+        .box:hover{
+            scale:1.04;
+        }
+        .b1::after , .b2::after, .b3::after, .b4::after, .b5::after, .b6::after, .b7::after, .b8::after, .b9::after, .b10::after{
+            position:absolute;
+            left:9px;
+            bottom:-2px;
+            font-size: 110px;
+            font-weight: 700;
+            -webkit-text-stroke: 2px rgb(232, 227, 227);
+            color: black;
+            content: '1';
+        }
+        .b2::after{
+            content:'2';
+        }
+        .b3::after{
+            content:'3';
+        }
+        .b4::after{
+            content:'4';
+        }
+        .b5::after{
+            content:'5';
+        }
+        .b6::after{
+            content:'6';
+        }
+        .b7::after{
+            content:'7';
+        }
+        .b8::after{
+            content:'8';
+        }
+        .b9::after{
+            content:'9';
+        }
+        .b10::after{
+            content:'10';
+        }
+        .rad{
+            border-radius: 12px;
+            margin-left: 40px;
+            width: 200px;
+        }
+        
+
+
+.dark{
+  width:100%;
+            min-height:200px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            bottom: 400px;
+            color: white;
+            padding:15px;
+            background: linear-gradient(to bottom, transparent, #00000079, #000000,  #000000 );
+}
+  </style>
+</head>
+    
+<body>
+    <!-- navbar -->
+    <div class="nav d-flex py-4 flex-column justify-content-start align-items-center">
+        <div class="logo mt-4 mx-2">
+            <img src="hlogo.png" width="50px">
+            <div class=" icons d-flex align-items-center justify-content-center flex-column">
+                <i class="fa-solid fa-house icon text-light mt-4 "></i>
+                <i class="fa-solid fa-magnifying-glass icon"></i>
+                <i class="fa-solid fa-desktop icon"></i>
+                <i class="fa-solid fa-ticket icon"></i>
+                <i class="fa-solid fa-person-running icon"></i>
+                <i class="fa-solid fa-video icon"></i>
+                <i class="fa-solid fa-table-columns icon"></i>
+                <i class="fa-regular fa-circle-user icon"></i>
+            </div>
+        </div>
+     </div>
+     <div class="main">
+        <!-- section1 -->
+         <div class="section1 d-flex align-items-center justify-content-start gap-5 m-4">
+            <img src="daredevil.jpg" class="dare" alt="">
+            <div class=" sec1m d-flex align-items-start flex-column justify-content-center ">
+                <div class="d-flex gap-3 mb-3 justify-content-center align-items-start">
+                    <img src="jio.png" class="jio" height="50px" alt="">
+                    <div class="d-flex flex-column ">
+                      <p style="margin: 0;"><b>Daredevil</b></p>
+                      <p class="text-secondary" style="margin: 0;">Streaming From March 5</p>
+                    </div>
+                </div>
+                    <p>Daredevil's secret life is on the line in this gripping superhero drama !</p>
+                <button type="button" class="trailer btn-secondary">Trailer</button>
+              </div>
+            </div>
+            
+
+            <!-- section2 -->
+             <div class="section2">
+               <!-- section2-1 -->
+              <div class="section2-1">
+                <img src="bgi.avif" class="bg" alt="">
+
+                <div class="dark">
+                  <div class="title">
+                    <img src="title.avif" alt="">
+                    <p class="text-primary fs-6 mt-2">Top 10 in India</p>
+                    <p class="text-light mt-2 fs-5" ><b></b></p>
+                    <p class="text-light mt-2">Two types of work ethics clash when analogue meets digital in arural government workplace, propelling the mundane to hilarious</p>
+                    <p class="text-light mt-2 fs-5"><strong>Comedy | Romance | Dramedy | Light-hearted</strong></p>
+                    <div class="d-flex gap-3 align-items-end justify-content-start">
+                        <button class=" watchnow mt-3"><i class="fa-solid fa-play mx-3"></i>Watch Now</button>
+                        <button class="plus fs-3 text-center text-light">+</button>
+                      </div>
+                      <div class="bl d-flex">
+                        <img src="bgi.avif" class="pop" alt="">
+                        <img src="bg2.avif" class="pop" alt="">
+                        <img src="bg3.webp" class="pop" alt="">
+                        <img src="bg4.avif" class="pop" alt="">
+                        <img src="bg5.avif" class="pop" alt="">
+                      </div>
+                </div>
+              
+
+
+                <!-- section2-2 -->
+                <div class="section2-2">
+                  <p class="text"><b>Latest Releases</b></p>
+                <div class="latest d-flex  ">
+                    <div class="b1 box ">
+                        <img src="b1 - Copy.jpg" class="rad"   alt="">
+                    </div>
+                    <div class="b2 box ">
+                        <img src="b2.jpg"  class="rad"  alt="">
+                    </div>
+                    <div class="b3 box ">
+                        <img src="b3.jpg" class="rad" alt="">
+                    </div>
+                    <div class="b4  box ">
+                        <img src="b4.jpg"  class="rad" alt="">
+                    </div>
+                    <div class="b5 box ">
+                        <img src="b5.jpg"  class="rad" alt="">
+                    </div>
+                    <div class="b6  box ">
+                        <img src="b6.jpg"  class="rad" alt="">
+                    </div>
+                    <div class="b7 box ">
+                        <img src="b7.jpg"  class="rad" alt="">
+                    </div>
+                    <div class="b8 box ">
+                        <img src="b8.jpeg"   class="rad" alt="">
+                    </div>
+                    <div class="b9 box ">
+                        <img src="b9.jpg"  class="rad" alt="">
+                    </div>
+                    <div class="b10 box ">
+                        <img src="b10.jpeg"  class="rad" alt="">
+                    </div>
+                </div>
+
+                <h1 class="text-light text head py-10px">Studios</h1>
+                <div class="latest d-flex  ">
+                  <div class=" box ">
+                      <img src="s1.png" class="rad"   alt="">
+                  </div>
+                  <div class=" box ">
+                      <img src="s2.png"  class="rad"  alt="">
+                  </div>
+                  <div class="box ">
+                      <img src="s3.png" class="rad" alt="">
+                  </div>
+                  <div class=" box ">
+                      <img src="s4.png"class="rad" alt="">
+                  </div>
+                  <div class="box ">
+                      <img src="s5.png"  class="rad" alt="">
+                  </div>
+                  <div class="b box ">
+                      <img src="s6.png"  class="rad" alt="">
+                  </div>
+                  <div class="box ">
+                      <img src="s7.png"  class="rad" alt="">
+                  </div>
+                  <div class="box ">
+                      <img src="s8.png"   class="rad" alt="">
+                  </div>
+
+              </div>
+              
+              <h1 class="text-light text head py-10px">Disney Movies</h1>
+              <div class="latest d-flex  ">
+                <div class=" box ">
+                    <img src="d1.webp" class="rad"   alt="">
+                </div>
+                <div class=" box ">
+                    <img src="d12.webp"  class="rad"  alt="">
+                </div>
+                <div class="box ">
+                    <img src="d11.webp" class="rad" alt="">
+                </div>
+                <div class=" box ">
+                    <img src="d5.webp"class="rad" alt="">
+                </div>
+                <div class="box ">
+                    <img src="d6.webp"  class="rad" alt="">
+                </div>
+                <div class="box ">
+                    <img src="d7.webp"  class="rad" alt="">
+                </div>
+                <div class="box ">
+                    <img src="d4.webp"  class="rad" alt="">
+                </div>
+                <div class="box ">
+                    <img src="d8.webp"   class="rad" alt="">
+                </div>
+
+            </div>
+             </div>
+             </div>
+
+ 
+
+
+
+         </div>
+
+        </div>
+
+
+
+
+
+
+
+    <script src="images/https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
