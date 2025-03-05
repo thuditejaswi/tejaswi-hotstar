@@ -7,7 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <title>Hotstar</title>
+    <title>JioHotstar-Watch Movies,TV Shows...</title>
+    <link rel="icon" type="image" href="jio.png">
     <style>
     * {
         margin: 0;
@@ -36,18 +37,49 @@
       top: 0;
   }
   .icons{
-      padding-top: 90px;
-  }
-  .icon{
-  margin-top: 40px;
-  color: gray;
-        cursor: pointer;
-  }
-  .icon:hover {
-        font-size: 20px;
         color: white;
-        transition: 0.18s all ease;
+        display: flex;
+        flex-direction: column; 
+        align-items: start;
+        justify-content: center;
+       font-size: 15px;
+       gap: 20px;
+       margin-left: 15px;
+       margin-top: 120px;
+      
+    
       }
+      .icon{
+        display: flex;
+        gap: 5px;
+       margin-left: 2px;    
+      }
+      
+      .icon :hover{
+        color: gray;
+        .sub-icon p{
+            opacity: 1;
+        }
+      }
+      .p-tag{
+        opacity: 0;
+        cursor: pointer;
+      
+      }
+      .icons:hover{
+        cursor: pointer;
+        background: linear-gradient(to left, transparent, #000000,#000000,#000000);
+        scale: 1.01;
+     
+        .p-tag{
+            opacity: 2;
+        }
+      }
+      .icons i{
+     cursor: pointer;
+    
+      }
+    
       .main {
         width: 95vw;
         height: 100vh;
@@ -85,9 +117,9 @@ border-radius:5px  ;
 
   }
   .section2{
-    min-height: 100vh;
-    width: 93vw;
-    float: right;
+    width: 100%;
+        margin: auto;
+        /* margin-top: 30px; */
     margin-top: 10px;
     background-color: #000000;
   }
@@ -122,19 +154,25 @@ border-radius:5px  ;
       background-color: rgba(119, 119, 119, 0.399);
       padding-top: 0;
   }
+  .section2-1 {
+    width: 100%;
+        position: relative;
+        /* bottom: 400px; */
+    }
   .bl {
-      overflow: scroll;
+    overflow: scroll;
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
       width: 350px;
       gap: 10px;
-      padding: 20px;
-      position:fixed;
-            bottom: 10px;
-            right: 10px;
+      /* padding: 20px; */
     }
 
     .pop {
       width: 95px;
       cursor: pointer;
+      opacity: 0.5;
 
     }
     .bl::-webkit-scrollbar {
@@ -143,14 +181,8 @@ border-radius:5px  ;
     .pop:hover {
       scale: 1.1;
       transition: 0.18s all ease;
+      opacity: 1;
     }
-    .section2{
-    min-height: 100vh;
-    width: 95vw;
-    float: right;
-    margin-top: 10px;
-    background-color: #000000;
-  }
   .text{
     color: white;
     font-size: 25px;
@@ -161,9 +193,12 @@ border-radius:5px  ;
 
   }
   .latest{
-    margin-left: 20px;
-    margin-right: 40px;
-            overflow: scroll;
+    width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+            overflow-x: scroll;
+            overflow-y: hidden;
              height:auto;
 }
 .latest::-webkit-scrollbar {
@@ -218,7 +253,7 @@ border-radius:5px  ;
             content:'10';
         }
         .rad{
-            border-radius: 12px;
+            border-radius: 2px;
             margin-left: 40px;
             width: 200px;
         }
@@ -247,16 +282,17 @@ border-radius:5px  ;
     <div class="nav d-flex py-4 flex-column justify-content-start align-items-center">
         <div class="logo mt-4 mx-2">
             <img src="hlogo.png" width="50px">
-            <div class=" icons d-flex align-items-center justify-content-center flex-column">
-                <i class="fa-solid fa-house icon text-light mt-4 "></i>
-                <i class="fa-solid fa-magnifying-glass icon"></i>
-                <i class="fa-solid fa-desktop icon"></i>
-                <i class="fa-solid fa-ticket icon"></i>
-                <i class="fa-solid fa-person-running icon"></i>
-                <i class="fa-solid fa-video icon"></i>
-                <i class="fa-solid fa-table-columns icon"></i>
-                <i class="fa-regular fa-circle-user icon"></i>
+            <div class="icons">
+                <div class="icon"><i class="fa-solid fa-house"></i><p class="p-tag">Home</p></div>
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i><p class="p-tag">Search</p></div>
+                <div class="icon"><i class="fa-solid fa-tv"></i><p class="p-tag">TV</p></div>
+                <div class="icon"><i class="fa-solid fa-bowl-food"></i><p class="p-tag">Movies</p></div>
+                <div class="icon"><i class="fa-solid fa-person-running"></i><p class="p-tag">Sports</p></div>
+                <div class="icon"><i class="fa-solid fa-video"></i><p class="p-tag">Sparks</p></div> 
+                <div class="icon"><i class="fa-solid fa-table"></i><p class="p-tag">Categories</p></div>
+                <div class="icon"><i class="fa-regular fa-circle-user"></i><p class="p-tag">My Space</p></div>
             </div>
+             
         </div>
      </div>
      <div class="main">
@@ -282,8 +318,17 @@ border-radius:5px  ;
                <!-- section2-1 -->
               <div class="section2-1">
                 <img src="bgi.avif" class="bg" alt="">
+                <div class="bl d-flex">
+                    <img src="bgi.avif" class="pop" alt="">
+                    <img src="bg2.avif" class="pop" alt="">
+                    <img src="bg3.webp" class="pop" alt="">
+                    <img src="bg4.avif" class="pop" alt="">
+                    <img src="bg5.avif" class="pop" alt="">
+                  </div>
+                </div>
 
                 <div class="dark">
+                    
                   <div class="title">
                     <img src="title.avif" alt="">
                     <p class="text-primary fs-6 mt-2 new"><strong>New Release</strong></p>
@@ -294,13 +339,7 @@ border-radius:5px  ;
                         <button class=" watchnow mt-3"><i class="fa-solid fa-play mx-3"></i>Watch Now</button>
                         <button class="plus fs-3 text-center text-light">+</button>
                       </div>
-                      <div class="bl d-flex">
-                        <img src="bgi.avif" class="pop" alt="">
-                        <img src="bg2.avif" class="pop" alt="">
-                        <img src="bg3.webp" class="pop" alt="">
-                        <img src="bg4.avif" class="pop" alt="">
-                        <img src="bg5.avif" class="pop" alt="">
-                      </div>
+                     
                 </div>
               
 
@@ -313,7 +352,7 @@ border-radius:5px  ;
                         <img src="b1 - Copy.jpg" class="rad"   alt="">
                     </div>
                     <div class="b2 box ">
-                        <img src="b2.jpg"  class="rad"  alt="">
+                        <img src="b10.jpeg"  class="rad"  alt="">
                     </div>
                     <div class="b3 box ">
                         <img src="b3.jpg" class="rad" alt="">
@@ -322,7 +361,7 @@ border-radius:5px  ;
                         <img src="b4.jpg"  class="rad" alt="">
                     </div>
                     <div class="b5 box ">
-                        <img src="b5.jpg"  class="rad" alt="">
+                        <img src="b10.jpeg"  class="rad" alt="">
                     </div>
                     <div class="b6  box ">
                         <img src="b6.jpg"  class="rad" alt="">
@@ -331,7 +370,7 @@ border-radius:5px  ;
                         <img src="b7.jpg"  class="rad" alt="">
                     </div>
                     <div class="b8 box ">
-                        <img src="b8.jpeg"   class="rad" alt="">
+                        <img src="b3.jpg"   class="rad" alt="">
                     </div>
                     <div class="b9 box ">
                         <img src="b9.jpg"  class="rad" alt="">
@@ -373,48 +412,35 @@ border-radius:5px  ;
               <h1 class="text-light text head py-10px">Disney Movies</h1>
               <div class="latest d-flex  ">
                 <div class=" box ">
-                    <img src="d1.webp" class="rad"   alt="">
+                    <img src="d4.webp" class="rad"   alt="">
                 </div>
                 <div class=" box ">
                     <img src="d12.webp"  class="rad"  alt="">
                 </div>
                 <div class="box ">
-                    <img src="d11.webp" class="rad" alt="">
+                    <img src="d4.webp" class="rad" alt="">
                 </div>
                 <div class=" box ">
-                    <img src="d5.webp"class="rad" alt="">
-                </div>
-                <div class="box ">
-                    <img src="d6.webp"  class="rad" alt="">
-                </div>
-                <div class="box ">
-                    <img src="d7.webp"  class="rad" alt="">
+                    <img src="d12.webp"class="rad" alt="">
                 </div>
                 <div class="box ">
                     <img src="d4.webp"  class="rad" alt="">
                 </div>
                 <div class="box ">
-                    <img src="d8.webp"   class="rad" alt="">
+                    <img src="d12.webp"  class="rad" alt="">
+                </div>
+                <div class="box ">
+                    <img src="d4.webp"  class="rad" alt="">
+                </div>
+                <div class="box ">
+                    <img src="d12.webp"   class="rad" alt="">
                 </div>
 
             </div>
              </div>
              </div>
 
- 
-
-
-
-         </div>
-
         </div>
-
-
-
-
-
-
-
     <script src="images/https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
